@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "fastapi-tutorial"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "fastapi_tutorial"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.85.0"
+pytest = "^7.1.3"
+uvicorn = "^0.18.3"
+SQLAlchemy = "^1.4.41"
+pydantic = "^1.10.2"
+psycopg2 = "^2.9.3"
+coverage = "^6.4.4"
+mock-alchemy = "^0.2.5"
+
+[tool.coverage.run]
+source = ["fastapi_tutorial"]
+omit = ["fastapi_tutorial/main.py"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
